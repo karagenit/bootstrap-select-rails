@@ -7,13 +7,13 @@
 
 @mixin box-sizing($fmt) {
   -webkit-box-sizing: $fmt;
-     -moz-box-sizing: $fmt;
-          box-sizing: $fmt;
+  -moz-box-sizing: $fmt;
+  box-sizing: $fmt;
 }
 
 @mixin box-shadow($fmt) {
   -webkit-box-shadow: $fmt;
-          box-shadow: $fmt;
+  box-shadow: $fmt;
 }
 
 @function fade($color, $amnt) {
@@ -30,7 +30,14 @@ select.selectpicker {
 }
 
 .bootstrap-select {
-  width: 220px \0; /*IE9 and below*/
+  width: 220px \0
+; /*IE9 and below*/
+
+  &.btn-group {
+    > .dropdown-toggle {
+      height: 100%;
+    }
+  }
 
   // The selectpicker button
   > .dropdown-toggle {
@@ -41,7 +48,9 @@ select.selectpicker {
     &.bs-placeholder,
     &.bs-placeholder:hover,
     &.bs-placeholder:focus,
-    &.bs-placeholder:active { color: $input-color-placeholder; }
+    &.bs-placeholder:active {
+      color: $input-color-placeholder;
+    }
   }
 
   > select {
@@ -194,6 +203,7 @@ select.selectpicker {
     @include box-sizing(border-box);
 
     &.inner {
+      display: block; // hotfix for Bootstrap v4.0.0-alpha6
       position: static;
       float: none;
       border: 0;
@@ -203,8 +213,10 @@ select.selectpicker {
       box-shadow: none;
     }
 
-    li {
+    a.dropdown-item {
       position: relative;
+      cursor: pointer;
+      user-select: none;
 
       &.active small {
         color: #fff;
@@ -214,9 +226,12 @@ select.selectpicker {
         @include cursor-disabled();
       }
 
-      a {
-        cursor: pointer;
-        user-select: none;
+      &.hidden {
+        display: none;
+      }
+
+      span.dropdown-item-inner {
+        display: block;
 
         &.opt {
           position: relative;
@@ -234,6 +249,17 @@ select.selectpicker {
 
       small {
         padding-left: 0.5em;
+      }
+    }
+
+    // bootstrap 4 adjustments
+    .dropdown-item {
+      .span.check-mark {
+        display: none;
+      }
+
+      .span.text {
+        display: inline-block;
       }
     }
 
@@ -272,8 +298,8 @@ select.selectpicker {
     }
   }
 
-  &.show-tick .dropdown-menu li {
-    &.selected a span.check-mark {
+  &.show-tick .dropdown-menu a {
+    &.selected span.dropdown-item-inner span.check-mark {
       position: absolute;
       display: inline-block;
       right: 15px;
@@ -385,5 +411,11 @@ select.selectpicker {
     margin-bottom: 0;
     width: 100%;
     float: none;
+  }
+
+  .input-group & {
+    .form-control {
+      width: 100%;
+    }
   }
 }
