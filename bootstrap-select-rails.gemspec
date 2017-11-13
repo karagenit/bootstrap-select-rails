@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'bootstrap-select-rails/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "bootstrap-select-4-rails"
+  spec.name          = "bootstrap4-select-rails"
   spec.version       = Bootstrap::Select::Rails::VERSION
   spec.authors       = ["Caleb Smith"]
   spec.email         = ["karagenit@outlook.com"]
