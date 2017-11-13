@@ -12,7 +12,7 @@ You will need to install Bootstrap 4 & jQuery 3, through the `bootstrap` and `jq
 
 Add this line to your application's Gemfile:
 
-    gem 'bootstrap-select-4-rails'
+    gem 'bootstrap4-select-rails'
 
 And then execute:
 
@@ -20,7 +20,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bootstrap-select-4-rails
+    $ gem install bootstrap4-select-rails
 
 ## Usage
 
