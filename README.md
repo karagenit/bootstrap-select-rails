@@ -1,23 +1,18 @@
 # Bootstrap::Select::Rails
 
-Assets for https://github.com/silviomoreto/bootstrap-select - see it for details
+`bootstrap-select`, fixed for Bootstrap 4 (Alpha 6) and packaged into a Gem for Rails.
 
-add to application.js and application.css something like
+This is a fork of the original [bootstrap-select-rails](https://github.com/Slashek/bootstrap-select-rails) Gem repository. The original is based on [bootstrap-select](https://github.com/silviomoreto/bootstrap-select), but as this library isn't compatible with Bootstrap 4, I rewrote the Gem to use [a fork of the original](https://github.com/heimrichhannot/bootstrap-select) that is compatible.
 
-    //= require bootstrap-select
+## Preprequisites
 
-Also, you must require at least the *alert* and *dropdown* bootstrap components.
-For example, if using
-[bootstrap-sass](https://github.com/twbs/bootstrap-sass):
-
-    //= require bootstrap/alert
-    //= require bootstrap/dropdown
+You will need to install Bootstrap 4 & jQuery 3, through the `bootstrap` and `jquery-rails` gems (respectively).
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'bootstrap-select-rails'
+    gem 'bootstrap-select-4-rails'
 
 And then execute:
 
@@ -25,28 +20,21 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bootstrap-select-rails
+    $ gem install bootstrap-select-4-rails
 
 ## Usage
 
-TODO: Write usage instructions here
+In your `app/assets/stylesheets/application.scss`, add the following:
 
-## Contributing
+    @import "bootstrap-select-4-rails";
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+If you intend to use features such as the live search, you must add the following to `app/assets/javascripts/application.js`:
 
-# Copyright and license
+    //= require bootstrap-select
 
-Copyright (C) 2013 bootstrap-select-rails
+Also, you must require at least the *alert* and *dropdown* bootstrap components. For example, if you're using [bootstrap-sass](https://github.com/twbs/bootstrap-sass):
 
-Licensed under the MIT license.
+    //= require bootstrap/alert
+    //= require bootstrap/dropdown
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Otherwise, requiring all of `bootstrap` or `bootstrap-sprockets` will work.
