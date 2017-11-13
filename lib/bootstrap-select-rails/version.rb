@@ -1,7 +1,7 @@
-module Bootstrap
+module Bootstrap4
   module Select
     module Rails
-      VERSION = "1.12.1"
+      VERSION = IO.read('../../version.txt')
     end
   end
 end
