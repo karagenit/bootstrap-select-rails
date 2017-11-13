@@ -1,5 +1,8 @@
 # Change Log
 
+## [v2.0.0](https://github.com/karagenit/bootstrap-select-rails/tree/v2.0.0) (2017-11-13)
+[Full Changelog](https://github.com/karagenit/bootstrap-select-rails/compare/v1.3.0.1...v2.0.0)
+
 ## [v1.3.0.1](https://github.com/karagenit/bootstrap-select-rails/tree/v1.3.0.1) (2013-05-24)
 [Full Changelog](https://github.com/karagenit/bootstrap-select-rails/compare/v1.3.0...v1.3.0.1)
 
