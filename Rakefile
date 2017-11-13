@@ -2,7 +2,7 @@ task :default => [:clean, :build, :install, :test]
 
 task :build do
     sh "bundle install"
-    sh "gem build .gemspec"
+    sh "gem build bootstrap4-select-rails.gemspec"
     sh "rdoc lib/"
 end
 
