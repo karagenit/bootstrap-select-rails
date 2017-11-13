@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'bootstrap-select-rails/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "bootstrap-select-rails"
+  spec.name          = "bootstrap-select-4-rails"
   spec.version       = Bootstrap::Select::Rails::VERSION
-  spec.authors       = ["Maciej Krajowski-Kukiel"]
-  spec.email         = ["maciej.krajowski@gmail.com"]
-  spec.description   = %q{assets for bootstrap-select}
-  spec.summary       = %q{assets for bootstrap-select}
-  spec.homepage      = "https://github.com/Slashek/bootstrap-select-rails"
+  spec.authors       = ["Caleb Smith"]
+  spec.email         = ["karagenit@outlook.com"]
+  spec.description   = "bootstrap-select Gem for Rails"
+  spec.summary       = "Updated version of bootstrap-select, compatible with Bootstrap 4 (Alpha 6)"
+  spec.homepage      = "https://github.com/karagenit/bootstrap-select-rails"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
