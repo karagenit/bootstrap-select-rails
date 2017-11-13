@@ -26,7 +26,7 @@ Or install it yourself as:
 
 In your `app/assets/stylesheets/application.scss`, add the following:
 
-    @import "bootstrap-select-4-rails";
+    @import "bootstrap-select";
 
 If you intend to use features such as the live search, you must add the following to `app/assets/javascripts/application.js`:
 
