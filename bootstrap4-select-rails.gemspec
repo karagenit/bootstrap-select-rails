@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'bootstrap-select-rails/version'
+require 'bootstrap4-select-rails/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "bootstrap4-select-rails"
-  spec.version       = Bootstrap::Select::Rails::VERSION
+  spec.version       = Bootstrap4::Select::Rails::VERSION
   spec.authors       = ["Caleb Smith"]
   spec.email         = ["karagenit@outlook.com"]
   spec.description   = "bootstrap-select Gem for Rails"
