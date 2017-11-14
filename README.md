@@ -38,3 +38,29 @@ Also, you must require at least the *alert* and *dropdown* bootstrap components.
     //= require bootstrap/dropdown
 
 Otherwise, requiring all of `bootstrap` or `bootstrap-sprockets` will work.
+
+## Examples
+
+Inside of a form:
+
+```
+<%= form.select :name, Users.all.collect { |u| [u.name, u.id] }, {}, { :class => 'selectpicker' } %>
+```
+
+Advanced options can be found [here](https://silviomoreto.github.io/bootstrap-select/options/), and are easily added to the rails forms:
+
+```
+<%= form.select :name, Users.all.collect { |u| [u.name, u.id] }, {}, { :class => 'selectpicker', :data => { :'live-search' => true } } %>
+```
+
+## Troubleshooting
+
+The live-search feature requires some JavaScript to be executed when the page loads; however, turbolinks (enabled by default in Rails 5.1) doesn't always allow this to execute, which means your `select`s may not appear. 
+
+To fix this, add the following to `app/assets/javascripts/live-search.js` or similar file:
+
+```
+document.addEventListener("turbolinks:load", function() {
+    $('.selectpicker').selectpicker();
+});
+```
