@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Caleb Smith"]
   spec.email         = ["karagenit@outlook.com"]
   spec.description   = "bootstrap-select Gem for Rails"
-  spec.summary       = "Updated version of bootstrap-select, compatible with Bootstrap 4 (Alpha 6)"
+  spec.summary       = "Updated version of bootstrap-select, compatible with Bootstrap 4 (Beta 2.1)"
   spec.homepage      = "https://github.com/karagenit/bootstrap-select-rails"
   spec.license       = "MIT"
 
