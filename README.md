@@ -1,6 +1,6 @@
-# Bootstrap::Select::Rails
+# Bootstrap4::Select::Rails
 
-`bootstrap-select`, fixed for Bootstrap 4 (Alpha 6) and packaged into a Gem for Rails.
+`bootstrap-select`, fixed for Bootstrap 4 (Beta 2.1) and packaged into a Gem for Rails.
 
 This is a fork of the original [bootstrap-select-rails](https://github.com/Slashek/bootstrap-select-rails) Gem repository. The original is based on [bootstrap-select](https://github.com/silviomoreto/bootstrap-select), but as this library isn't compatible with Bootstrap 4, I rewrote the Gem to use [a fork of the original](https://github.com/heimrichhannot/bootstrap-select) that is compatible.
 
